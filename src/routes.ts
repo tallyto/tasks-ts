@@ -1,9 +1,8 @@
 import {Router} from 'express'
+import {getTasks} from './controller/TasksController'
 
 const routes = Router()
 
-routes.get("/",(req, res)=>{
-    res.json({message: "Hello Word"})
-})
+routes.get("/tasks",getTasks)
 
 export default routes
